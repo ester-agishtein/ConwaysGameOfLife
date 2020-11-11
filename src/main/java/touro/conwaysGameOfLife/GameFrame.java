@@ -2,7 +2,6 @@ package touro.ConwaysGameOfLife;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseListener;
 
 public class GameFrame extends JFrame {
 
@@ -25,6 +24,7 @@ public class GameFrame extends JFrame {
         clear.addActionListener(actionEvent -> reset());
         next = new JButton("Next >");
         next.addActionListener(actionEvent -> nextMove());
+
         panel = new JPanel(new FlowLayout());
 
         panel.add(clear);
@@ -34,6 +34,7 @@ public class GameFrame extends JFrame {
         add(panel, BorderLayout.SOUTH);
 
     }
+
 
     private void nextMove() {
         grid.makeMove();
